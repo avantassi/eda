@@ -1,7 +1,6 @@
 @charset "UTF-8";
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 html {
   font-size: 16px; }
@@ -34,7 +33,11 @@ p {
 .container {
   margin: 0 auto;
   max-width: 1160px;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .container--row {
+    flex-direction: row; }
   .container:after {
     content: "";
     display: table; }
@@ -51,6 +54,11 @@ p {
   height: 100%;
   min-height: 650px; }
 
+.first-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff; }
+
 @font-face {
   font-family: 'Cera-Reg';
   src: url("../fonts/CeraPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/CeraPro-Regular.woff") format("woff"), url("../fonts/CeraPro-Regular.ttf") format("truetype"), url("../fonts/CeraPro-Regular.svg#CeraPro-Regular") format("svg");
@@ -61,6 +69,10 @@ p {
   src: url("../fonts/CeraPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/CeraPro-Bold.woff") format("woff"), url("../fonts/CeraPro-Bold.ttf") format("truetype"), url("../fonts/CeraPro-Bold.svg#CeraPro-Bold") format("svg");
   font-weight: normal;
   font-style: normal; }
+.hero {
+  background: url(../img/hero-bg.png) center center no-repeat;
+  background-size: cover; }
+
 .acco {
   width: 100%;
   max-width: 600px;
@@ -86,6 +98,7 @@ p {
   border-top: 1px solid #3face4;
   border-bottom: 1px solid #2479a5;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 /* Формируем блоки с содерханием */
@@ -94,16 +107,13 @@ p {
   overflow: hidden;
   max-height: 800px;
   opacity: 1;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0); }
+  transform: translate(0, 0); }
 
 /* Позаботимся о небольших экранах */
 @media (max-width: 550px) {
   .accordion {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    box-sizing: border-box;
+    transform: translate(0, 0);
     max-width: 100%;
     min-height: 100%;
     margin: 0;
@@ -111,8 +121,7 @@ p {
 /* Формируем неупорядоченный список */
 .acco ul {
   list-style: none;
-  -webkit-perspective: 900;
-          perspective: 900;
+  perspective: 900;
   padding: 0;
   margin: 0; }
 
@@ -129,16 +138,13 @@ p {
  * на основе нумерации в дереве элементов
 */
 .acco ul li:nth-of-type(1) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s; }
+  animation-delay: 0.5s; }
 
 .acco ul li:nth-of-type(2) {
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s; }
+  animation-delay: 0.75s; }
 
 .acco ul li:nth-of-type(3) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s; }
+  animation-delay: 1s; }
 
 .acco ul li:last-of-type {
   padding-bottom: 0; }
@@ -146,8 +152,7 @@ p {
 /* Сформируем  указатель переключения состояния аккордеона */
 .acco ul li i {
   position: absolute;
-  -webkit-transform: translate(-6px, 0);
-          transform: translate(-6px, 0);
+  transform: translate(-6px, 0);
   margin-top: 16px;
   /* расположим указатель на панели заголовка справа */
   right: 25px; }
@@ -162,12 +167,10 @@ p {
 
 /* Добавляем элемент трансформации указателя при переключении */
 .acco ul li i:before {
-  -webkit-transform: translate(-2px, 0) rotate(45deg);
-          transform: translate(-2px, 0) rotate(45deg); }
+  transform: translate(-2px, 0) rotate(45deg); }
 
 .acco ul li i:after {
-  -webkit-transform: translate(2px, 0) rotate(-45deg);
-          transform: translate(2px, 0) rotate(-45deg); }
+  transform: translate(2px, 0) rotate(-45deg); }
 
 /* Делаем чекбокс скрытым*/
 .acco ul li input[type=checkbox] {
@@ -186,23 +189,19 @@ p {
   margin-top: 0;
   max-height: 0;
   opacity: 0;
-  -webkit-transform: translate(0, 50%);
-          transform: translate(0, 50%); }
+  transform: translate(0, 50%); }
 
 /* А указатель показывает вниз */
 .acco ul li input[type=checkbox]:checked ~ i:before {
-  -webkit-transform: translate(2px, 0) rotate(45deg);
-          transform: translate(2px, 0) rotate(45deg); }
+  transform: translate(2px, 0) rotate(45deg); }
 
 .acco ul li input[type=checkbox]:checked ~ i:after {
-  -webkit-transform: translate(-2px, 0) rotate(-45deg);
-          transform: translate(-2px, 0) rotate(-45deg); }
+  transform: translate(-2px, 0) rotate(-45deg); }
 
 /*  Устанавливаем эффект перехода
  * между двумя состояниями указателя
 */
 div.msg, ul li i:before, ul li i:after {
-  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out; }
 
 /*# sourceMappingURL=main.css.map */
