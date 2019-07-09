@@ -1,0 +1,13 @@
+.video-block{
+  background-color: $black;
+  position: relative;
+  padding-bottom: 300px;
+
+  .wrap{
+    padding-top: 50px;
+  }
+
+  &__wrap{
+    width: 70%;
+  }
+}

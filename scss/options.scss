@@ -1,0 +1,46 @@
+.options{
+  background-color: $white;
+  padding-top: 200px;
+  position: relative;
+  margin-bottom: 180px;
+
+  h2{
+    text-align: center;
+  }
+
+  &__row{
+    background: linear-gradient(to right, $gray 50%, $pink 50%);
+
+    &--revert{
+      background: linear-gradient(to left, $gray 50%, $pink 50%);
+      padding-bottom: 200px;
+    }
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px 30px;
+  }
+
+  &__img-wrap{
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .descr{
+    margin-top: 20px;
+
+    &--big{
+      margin-top: 0;
+    }
+  }
+}
+
+.price{
+  color: $darkred;
+  font-size: 24px;
+  font-weight: bold;
+}

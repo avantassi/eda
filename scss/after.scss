@@ -1,0 +1,28 @@
+.after{
+  background-color: $white;
+  position: relative;
+  padding: 50px 0 100px;
+
+  &__wrap{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+
+  &__img-wrap{
+    min-width: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 15px;
+  }
+}

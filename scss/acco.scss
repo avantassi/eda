@@ -1,28 +1,25 @@
 .acco {
   width: 100%;
-  max-width: 600px;
+  max-width: 850px;
   min-height: 0;
   display: block;
   position: relative;
-  margin: 0 auto;
+  margin-right: auto;
   padding: 0;
-  background-color: #fefffa;
+  background-color: transparent;
   overflow: hidden;
 }
 
 /* заголовки панелей аккордеона */
 .acco__title {
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 24px;
   letter-spacing: 1px;
   display: block;
   margin: 0;
-  padding: 10px 25px;
+  padding: 10px 0 20px 70px;
+  color: $black;
+  font-weight: bold;
   cursor: pointer;
-  color: #f4f4f4;
-  background: #2d8bbb;
-  border-top: 1px solid #3face4;
-  border-bottom: 1px solid #2479a5;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -35,6 +32,8 @@
   max-height: 800px;
   opacity: 1;
   transform: translate(0, 0);
+  padding-left: 70px;
+  padding-bottom: 50px;
 }
 
 /* Позаботимся о небольших экранах */
@@ -65,47 +64,49 @@
   position: relative;
   padding: 0;
   margin: 0;
+  animation-delay: 0.5s;
 }
 
 /* устанавливаем время ожидания перед воспроизведением анимации
  * на основе нумерации в дереве элементов
 */
-.acco ul li:nth-of-type(1) {
-  animation-delay: 0.5s;
-}
-.acco ul li:nth-of-type(2) {
-  animation-delay: 0.75s;
-}
-.acco ul li:nth-of-type(3) {
-  animation-delay: 1s;
-}
-.acco ul li:last-of-type {
-  padding-bottom: 0;
-}
+//.acco ul li:nth-of-type(1) {
+//  animation-delay: 0.5s;
+//}
+//.acco ul li:nth-of-type(2) {
+//  animation-delay: 0.75s;
+//}
+//.acco ul li:nth-of-type(3) {
+//  animation-delay: 1s;
+//}
+//.acco ul li:last-of-type {
+//  padding-bottom: 0;
+//}
 
 /* Сформируем  указатель переключения состояния аккордеона */
 .acco ul li i {
   position: absolute;
-  transform: translate(-6px, 0);
-  margin-top: 16px;
-  /* расположим указатель на панели заголовка справа */
-  right: 25px;
+  //transform: translate(-6px, 0);
+  margin-top: 25px;
+  left: 5px;
 }
 
 /* "Рисуем " сам указатель */
 .acco ul li i:before, .acco ul li i:after {
   content: "";
   position: absolute;
-  background-color: #eee;
-  width: 3px;
-  height: 9px;
+  background-color: $red;
+  width: 16px;
+  height: 5px;
 }
 /* Добавляем элемент трансформации указателя при переключении */
 .acco ul li i:before {
-  transform: translate(-2px, 0) rotate(45deg);
+  //transform: translate(-2px, 0) rotate(45deg);
 }
 .acco ul li i:after {
-  transform: translate(2px, 0) rotate(-45deg);
+  width: 0;
+  transform: rotate(90deg);
+  //transform: translate(2px, 0) rotate(-45deg);
 }
 
 /* Делаем чекбокс скрытым*/
@@ -126,13 +127,15 @@
   max-height: 0;
   opacity: 0;
   transform: translate(0, 50%);
+  padding-bottom: 0;
 }
 /* А указатель показывает вниз */
 .acco ul li input[type=checkbox]:checked ~ i:before {
-  transform: translate(2px, 0) rotate(45deg);
+  //transform: translate(2px, 0) rotate(45deg);
 }
 .acco ul li input[type=checkbox]:checked ~ i:after {
-  transform: translate(-2px, 0) rotate(-45deg);
+  transform: rotate(90deg);
+  width: 16px;
 }
 /*  Устанавливаем эффект перехода
  * между двумя состояниями указателя
