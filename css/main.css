@@ -48,6 +48,9 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 0 20px; } }
   .container--row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -101,6 +104,9 @@ p {
   color: #ffffff;
   margin-bottom: 0;
   margin-left: 60px; }
+  @media screen and (max-width: 768px) {
+    .first-title {
+      display: none; } }
 
 .second-title {
   font-size: 48px;
@@ -201,6 +207,10 @@ p {
   text-decoration: none;
   font-weight: bold;
   margin-left: auto; }
+
+@media screen and (max-width: 768px) {
+  .logo__img {
+    max-width: 120px; } }
 
 .hero {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/hero-bg.jpg) center center no-repeat;
@@ -692,7 +702,7 @@ div.msg, ul li i:before, ul li i:after {
 
 .week {
   color: #000000;
-  font-size: 36px;
+  font-size: 34px;
   font-weight: bold;
   display: none; }
   .week.active {

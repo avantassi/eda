@@ -9,3 +9,13 @@
   font-weight: bold;
   margin-left: auto;
 }
+
+.logo{
+
+  &__img{
+
+    @include tablets{
+      max-width: 120px;
+    }
+  }
+}
