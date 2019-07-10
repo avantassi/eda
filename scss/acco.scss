@@ -67,26 +67,9 @@
   animation-delay: 0.5s;
 }
 
-/* устанавливаем время ожидания перед воспроизведением анимации
- * на основе нумерации в дереве элементов
-*/
-//.acco ul li:nth-of-type(1) {
-//  animation-delay: 0.5s;
-//}
-//.acco ul li:nth-of-type(2) {
-//  animation-delay: 0.75s;
-//}
-//.acco ul li:nth-of-type(3) {
-//  animation-delay: 1s;
-//}
-//.acco ul li:last-of-type {
-//  padding-bottom: 0;
-//}
-
 /* Сформируем  указатель переключения состояния аккордеона */
 .acco ul li i {
   position: absolute;
-  //transform: translate(-6px, 0);
   margin-top: 25px;
   left: 5px;
 }
@@ -100,13 +83,9 @@
   height: 5px;
 }
 /* Добавляем элемент трансформации указателя при переключении */
-.acco ul li i:before {
-  //transform: translate(-2px, 0) rotate(45deg);
-}
 .acco ul li i:after {
   width: 0;
   transform: rotate(90deg);
-  //transform: translate(2px, 0) rotate(-45deg);
 }
 
 /* Делаем чекбокс скрытым*/
@@ -129,10 +108,7 @@
   transform: translate(0, 50%);
   padding-bottom: 0;
 }
-/* А указатель показывает вниз */
-.acco ul li input[type=checkbox]:checked ~ i:before {
-  //transform: translate(2px, 0) rotate(45deg);
-}
+
 .acco ul li input[type=checkbox]:checked ~ i:after {
   transform: rotate(90deg);
   width: 16px;

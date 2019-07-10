@@ -3,6 +3,17 @@
   position: relative;
   padding: 50px 0 100px;
 
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(../img/square.png);
+    width: 620px;
+    height: 555px;
+    left: -15%;
+    top: -15%;
+  }
+
   &__wrap{
     display: flex;
     flex-direction: column;
