@@ -14,15 +14,28 @@
   z-index: 10;
   bottom: -60px;
 
+  @include tablets{
+    width: 80%;
+  }
+
   &__title{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 30px;
+
+    @include tablets{
+      text-align: center;
+    }
   }
 
   &__row{
     display: flex;
     justify-content: center;
+
+    @include tablets{
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .descr{
@@ -47,6 +60,13 @@
   @include placeholder{
     color: $black;
   }
+
+  @include tablets{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
 }
 
 .input-submit{
@@ -61,4 +81,11 @@
   font-size: 16px;
   font-weight: bold;
   border: none;
+
+  @include tablets{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 300px;
+  }
 }
