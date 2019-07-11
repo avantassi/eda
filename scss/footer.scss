@@ -1,6 +1,11 @@
 .footer{
   background-color: $brown;
   padding: 30px 0;
+  position: relative;
+
+  @include tablets{
+    padding-bottom: 60px;
+  }
 
   &__title{
     color: $white;
@@ -17,32 +22,68 @@
   .tel{
     margin-left: 0;
   }
+
+  .container{
+    @include tablets{
+      flex-direction: column;
+    }
+  }
+
+  .descr--white{
+    @include tablets{
+      text-align: center;
+    }
+  }
 }
 
 .logo-wrap{
   display: flex;
   flex-direction: column;
+
+  @include tablets{
+    order: 2;
+  }
 }
 
 .copyright{
   color: $white;
   font-size: 16px;
   font-weight: bold;
+
+  @include tablets{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -110px;
+  }
 }
 
 .contacts{
   display: flex;
   flex-direction: column;
+
+  @include tablets{
+    order: 3;
+  }
 }
 
 .props{
   display: flex;
   flex-direction: column;
+
+  @include tablets{
+    order: 3;
+  }
 }
 
 .social{
   display: flex;
   flex-direction: column;
+
+  @include tablets{
+    align-items: center;
+    order: 2;
+  }
 
   &__wrap{
     display: flex;
@@ -61,4 +102,8 @@
   font-size: 16px;
   color: $white;
   text-decoration: none;
+}
+
+.contacts, .props, .social{
+  margin-bottom: 30px;
 }

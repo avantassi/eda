@@ -4,6 +4,18 @@
   position: relative;
   margin-bottom: 180px;
 
+  form{
+    @include tablets{
+      bottom: -190px;
+    }
+  }
+
+  @include tablets{
+    background-color: $gray;
+    padding-top: 250px;
+    padding-bottom: 250px;
+  }
+
   h2{
     text-align: center;
   }
@@ -11,9 +23,17 @@
   &__row{
     background: linear-gradient(to right, $gray 50%, $pink 50%);
 
+    @include tablets{
+      background: $gray;
+    }
+
     &--revert{
       background: linear-gradient(to left, $gray 50%, $pink 50%);
       padding-bottom: 200px;
+
+      @include tablets{
+        padding-bottom: 0;
+      }
     }
   }
 
@@ -21,6 +41,13 @@
     display: flex;
     flex-direction: column;
     padding: 50px 100px 30px;
+
+    @include tablets{
+      max-width: 400px;
+      width: 400px !important;
+      display: flex !important;
+      padding: 0 0 0 20px;
+    }
   }
 
   &__img-wrap{
@@ -28,6 +55,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include tablets{
+      margin-left: -20px;
+    }
   }
 
   .descr{
@@ -44,3 +75,17 @@
   font-size: 24px;
   font-weight: bold;
 }
+
+#options__item1{
+  .slick-prev{
+    left: 49%;
+    z-index: 20;
+    top: 90px;
+  }
+
+  .slick-next{
+    left: 50.63%;
+    z-index: 20;
+    top: 90px;
+  }
+ }

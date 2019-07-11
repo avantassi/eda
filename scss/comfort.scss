@@ -1,6 +1,12 @@
 .comfort{
   background-color: $gray;
 
+  svg{
+    @include tablets{
+      display: none;
+    }
+  }
+
   .second-title{
     margin-top: 30px;
   }
@@ -10,6 +16,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 30px 0 100px;
+
+    @include tablets{
+      flex-direction: column;
+      margin-bottom: 0;
+    }
   }
 
   &__item{
@@ -17,6 +28,10 @@
     justify-content: space-between;
     margin-bottom: 70px;
     width: 30%;
+
+    @include tablets{
+      width: 100%;
+    }
   }
 
   &__img-wrap{

@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=500, user-scalable=0">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+<!--    <link rel="stylesheet" href="css/swiper.min.css">-->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Я бы съел!</title>
 </head>
@@ -146,19 +149,19 @@
                             </div>
                             <div id="week1" class="tabs__week active">
                                 <input id="tab1" type="radio" name="tabs" checked>
-                                <label for="tab1">Понедельник</label>
+                                <label for="tab1" class="monday">Понедельник</label>
                                 <input id="tab2" type="radio" name="tabs">
-                                <label for="tab2">Вторник</label>
+                                <label for="tab2" class="tuesday">Вторник</label>
                                 <input id="tab3" type="radio" name="tabs">
-                                <label for="tab3">Среда</label>
+                                <label for="tab3" class="wednesday">Среда</label>
                                 <input id="tab4" type="radio" name="tabs">
-                                <label for="tab4">Четверг</label>
+                                <label for="tab4" class="thursday">Четверг</label>
                                 <input id="tab5" type="radio" name="tabs">
-                                <label for="tab5">Пятница</label>
+                                <label for="tab5" class="friday">Пятница</label>
                                 <input id="tab6" type="radio" name="tabs">
-                                <label for="tab6">Суббота</label>
+                                <label for="tab6" class="saturday">Суббота</label>
                                 <input id="tab7" type="radio" name="tabs">
-                                <label for="tab7">Воскресенье</label>
+                                <label for="tab7" class="sunday">Воскресенье</label>
                                 <section id="content1" class="section-tab">
                                     <div class="content">
                                     <div class="content__item">
@@ -778,19 +781,19 @@
                             </div>
                             <div id="week2" class="tabs__week">
                                 <input id="tab10" type="radio" name="tabs2" checked>
-                                <label for="tab10">Понедельник2</label>
+                                <label for="tab10" class="monday">Понедельник2</label>
                                 <input id="tab20" type="radio" name="tabs2">
-                                <label for="tab20">Вторник</label>
+                                <label for="tab20" class="tuesday">Вторник</label>
                                 <input id="tab30" type="radio" name="tabs2">
-                                <label for="tab30">Среда</label>
+                                <label for="tab30" class="wednesday">Среда</label>
                                 <input id="tab40" type="radio" name="tabs2">
-                                <label for="tab40">Четверг</label>
+                                <label for="tab40" class="thursday">Четверг</label>
                                 <input id="tab50" type="radio" name="tabs2">
-                                <label for="tab50">Пятница</label>
+                                <label for="tab50" class="friday">Пятница</label>
                                 <input id="tab60" type="radio" name="tabs2">
-                                <label for="tab60">Суббота</label>
+                                <label for="tab60" class="saturday">Суббота</label>
                                 <input id="tab70" type="radio" name="tabs2">
-                                <label for="tab70">Воскресенье</label>
+                                <label for="tab70" class="sunday">Воскресенье</label>
                                 <section id="content10" class="section-tab">
                                     <div class="content">
                                     <div class="content__item">
@@ -1445,7 +1448,7 @@
             </div>
             <div class="options__row">
                 <div class="container">
-                    <div class="wrap">
+                    <div class="wrap" id="options__item1">
                         <div class="options__item">
                             <div class="options__img-wrap">
                                 <img src="img/options-1.png" alt="" class="options__img">
@@ -1473,7 +1476,7 @@
             </div>
             <div class="options__row options__row--revert">
                 <div class="container">
-                    <div class="wrap">
+                    <div class="wrap" id="options__item2">
                         <div class="options__item">
                             <div class="options__img-wrap">
                                 <img src="img/options-1.png" alt="" class="options__img">
@@ -1701,6 +1704,8 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
 integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 crossorigin="anonymous"></script>
+<!--<script src="js/swiper.min.js"></script>-->
+<script src="js/slick.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/main.js"></script>
 </body>

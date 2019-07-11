@@ -3,11 +3,33 @@
   position: relative;
   padding-bottom: 300px;
 
+  svg{
+    @include tablets{
+      display: none;
+    }
+  }
+
   .wrap{
     padding-top: 50px;
   }
 
   &__wrap{
     width: 70%;
+
+    iframe{
+      @include tablets{
+        width: 100%;
+      }
+    }
+
+    @include tablets{
+      width: 100%;
+    }
+  }
+
+  form{
+    @include tablets{
+      bottom: -175px;
+    }
   }
 }

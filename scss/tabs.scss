@@ -1,5 +1,16 @@
 .menu-tabs{
   padding-bottom: 100px;
+
+  @include tablets{
+    padding-top: 50px;
+    padding-bottom: 400px;
+  }
+
+  svg{
+    @include tablets{
+      display: none;
+    }
+  }
 }
 
 #container{
@@ -12,11 +23,21 @@
   margin: 0 auto;
   position: relative;
 
+  @include tablets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__week{
     display: none;
 
     &.active{
       display: block;
+
+      @include tablets{
+        display: flex;
+      }
     }
   }
 }
@@ -28,6 +49,11 @@
   position: absolute;
   top: 0;
   left: 270px;
+
+  @include tablets{
+    top: 195px;
+    left: 0;
+  }
 }
 
 .tabs input {
@@ -45,6 +71,13 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
+
+  @include tablets{
+    width: 60px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
 }
 
 .tabs input:checked + label {
@@ -62,6 +95,10 @@
     border-bottom: 30px solid transparent;
     right: -12px;
     top: 0;
+
+    @include tablets{
+      display: none;
+    }
   }
 }
 #tab1:checked ~ #content1,
@@ -103,11 +140,22 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @include tablets{
+    flex-wrap: nowrap;
+  }
+
   &__item{
     width: 30%;
     display: flex;
     flex-direction: column;
     padding-bottom: 50px;
+
+    @include tablets{
+      max-width: 400px;
+      width: 400px !important;
+      display: flex !important;
+      align-items: center;
+    }
   }
 
   &__img-wrap{
@@ -120,6 +168,10 @@
     display: flex;
     justify-content: space-between;
     margin: 0 20px;
+
+    @include tablets{
+      width: 200px;
+    }
   }
 
   &__day{
@@ -155,5 +207,57 @@
 
   &.active{
     display: block;
+  }
+}
+
+.slick-next, .slick-prev{
+  width: 80px;
+  height: 80px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+  &:before, &:after{
+    content: "";
+    position: absolute;
+    background-color: $white;
+    width: 5px;
+    height: 15px;
+    opacity: 1;
+  }
+}
+
+.slick-prev{
+  background: $red !important;
+  transform: rotate(270deg);
+
+  &:before{
+    transform: translate(-6px, 0) rotate(45deg);
+    left: 38px;
+    top: 31px;
+  }
+
+  &:after{
+    transform: translate(2px, 0) rotate(-45deg);
+    left: 38px;
+    top: 31px;
+  }
+}
+
+.slick-next{
+  left: 350px;
+  background: $red !important;
+  transform: rotate(90deg);
+
+  &:before{
+    transform: translate(-6px, 0) rotate(45deg);
+    left: 40px;
+    top: 31px;
+  }
+
+  &:after{
+    transform: translate(2px, 0) rotate(-45deg);
+    left: 40px;
+    top: 31px;
   }
 }
