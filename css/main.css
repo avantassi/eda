@@ -364,7 +364,10 @@ p {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-bottom: 70px;
-    width: 30%; }
+    width: 30%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
     @media screen and (max-width: 768px) {
       .comfort__item {
         width: 100%; } }
@@ -485,6 +488,9 @@ p {
   margin-top: 100px;
   position: relative;
   padding-bottom: 200px; }
+  @media screen and (max-width: 768px) {
+    .feedback {
+      margin-top: 0; } }
   @media screen and (max-width: 768px) {
     .feedback form {
       bottom: -195px; } }

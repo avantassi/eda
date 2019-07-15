@@ -28,6 +28,7 @@
     justify-content: space-between;
     margin-bottom: 70px;
     width: 30%;
+    align-items: flex-start;
 
     @include tablets{
       width: 100%;

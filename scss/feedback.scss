@@ -4,6 +4,10 @@
   position: relative;
   padding-bottom: 200px;
 
+  @include tablets{
+    margin-top: 0;
+  }
+
   form{
     @include tablets{
       bottom: -195px;
