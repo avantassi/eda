@@ -95,6 +95,11 @@
     align-items: center;
     width: 51px;
     height: 51px;
+    margin: 10px 0 0 10px;
+
+    &:first-of-type{
+      margin-left: 0;
+    }
   }
 }
 
